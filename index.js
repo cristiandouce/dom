@@ -745,16 +745,11 @@ List.prototype.find = function(selector){
  */
 
 List.prototype.empty = function(){
-  var elem, el;
-
-  for (var i = 0; i < this.els.length; ++i) {
-    el = this.els[i];
+  return this.forEach(function(el, i) {
     while (el.firstChild) {
       el.removeChild(el.firstChild);
     }
-  }
-
-  return this;
+  });
 }
 
 /**
