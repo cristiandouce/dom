@@ -321,7 +321,7 @@ List.prototype.replace = function(val){
   for (var i = 0; i < this.els.length; i++) {
     var old = this.els[i];
     var parent = old.parentNode;
-    if (parent) parent.replaceChild(el.cloneNode(true), old);
+    if (parent) parent.replaceChild(el, old);
   }
   return val;
 };
